@@ -13,11 +13,10 @@ public class TestDatabaseConnection {
 	private static String DRIVER = "com.mysql.jdbc.Driver";
 
 	public static void main(String[] args) {
-
 		Connection conn = null;
 
-		// get connection to database
 		try {
+			// get connection to database
 			System.out.println("Connecting to database: " + JDBC_URL);
 			Class.forName(DRIVER);
 			conn = DriverManager.getConnection(JDBC_URL, USER, PASSWORD);
