@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration // Its a configuration class
 @EnableWebMvc  // This annotation is equal to mvc:annotation-driven tag
-@ComponentScan(basePackages= {"nl.thuis.tutorial.springwebapp.controller" })
+@ComponentScan(basePackages= {"nl.thuis.tutorial.springwebapp.controller", "nl.thuis.tutorial.springwebapp.repository.impl" })
 public class SpringMvcConfig implements WebMvcConfigurer {
 
 	private static final String RESOLVER_PREFIX = "/WEB-INF/view/";

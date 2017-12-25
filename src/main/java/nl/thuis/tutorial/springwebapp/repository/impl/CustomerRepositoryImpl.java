@@ -27,7 +27,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	@Transactional
 	public List<Customer> getCustomers() {
 		Session session = sessionFactory.getCurrentSession();
-		Query<Customer> query = session.createQuery("from customer", Customer.class);	
+		Query<Customer> query = session.createQuery("from Customer", Customer.class);	
 		
 		return query.getResultList();
 	}
