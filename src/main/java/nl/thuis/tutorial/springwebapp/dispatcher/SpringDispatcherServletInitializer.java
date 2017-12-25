@@ -1,6 +1,9 @@
-package nl.thuis.tutorial.springwebapp.config;
+package nl.thuis.tutorial.springwebapp.dispatcher;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import nl.thuis.tutorial.springwebapp.config.SpringJpaConfig;
+import nl.thuis.tutorial.springwebapp.config.SpringMvcConfig;
 
 public class SpringDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -16,7 +19,7 @@ public class SpringDispatcherServletInitializer extends AbstractAnnotationConfig
 	 */
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] {SpringConfig.class};
+		return new Class[] {SpringMvcConfig.class, SpringJpaConfig.class};
 	}
 
 	/**
