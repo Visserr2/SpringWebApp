@@ -15,6 +15,12 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	private CustomerRepository customerRepository;
+	
+	@Override
+	@Transactional
+	public Customer getCustomer(int id) {
+		return customerRepository.getCustomer(id);
+	}
 
 	@Override
 	@Transactional  // use @Transactional always on the service layer

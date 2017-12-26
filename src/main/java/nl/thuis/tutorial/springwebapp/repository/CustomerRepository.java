@@ -6,7 +6,7 @@ import nl.thuis.tutorial.springwebapp.entity.Customer;
 
 public interface CustomerRepository {
 	
-	Customer getCustomer();
+	Customer getCustomer(long id);
 	
 	List<Customer> getCustomers();
 

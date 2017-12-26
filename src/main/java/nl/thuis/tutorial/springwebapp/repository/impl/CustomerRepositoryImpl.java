@@ -18,8 +18,10 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	public Customer getCustomer() {
-		return null;
+	public Customer getCustomer(long id) {
+		Session session = sessionFactory.getCurrentSession();
+		
+		return session.get(Customer.class, id);
 	}
 
 	@Override
@@ -34,7 +36,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	public void saveCustomer(Customer customer) {
 		Session session = sessionFactory.getCurrentSession();
 		
-		session.save(customer);
+		session.saveOrUpdate(customer);
 	}
 
 }
