@@ -32,6 +32,7 @@ public class CustomerController {
 		return "list-customers";
 	}
 	
+	// @GetMapping = @RequestMapping with method = GET
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model model) {
 		
@@ -42,6 +43,7 @@ public class CustomerController {
 		return "customer-form";
 	}
 	
+	// @PostMapping = @RequestMapping with method = POST
 	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
 		
