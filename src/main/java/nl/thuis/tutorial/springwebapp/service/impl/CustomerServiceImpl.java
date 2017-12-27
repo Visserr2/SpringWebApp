@@ -16,6 +16,8 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private CustomerRepository customerRepository;
 	
+	// use @Transactional always on the service layer
+	
 	@Override
 	@Transactional
 	public Customer getCustomer(int id) {
@@ -23,7 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	@Transactional  // use @Transactional always on the service layer
+	@Transactional
 	public List<Customer> getCustomers() {
 		return customerRepository.getCustomers();
 	}
@@ -32,5 +34,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Transactional
 	public void saveCustomer(Customer customer) {
 		customerRepository.saveCustomer(customer);
+	}
+
+	@Override
+	@Transactional
+	public void deleteCustomer(int id) {
+		customerRepository.deleteCustomer(id);
 	}
 }

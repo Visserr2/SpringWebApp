@@ -11,4 +11,6 @@ public interface CustomerRepository {
 	List<Customer> getCustomers();
 
 	void saveCustomer(Customer customer);
+
+	void deleteCustomer(long id);
 }
