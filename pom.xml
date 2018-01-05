@@ -81,11 +81,18 @@
 			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- Adding support for Spring orm -->
+		<!-- Adding support for Spring Orm -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
+		</dependency>
+
+		<!-- Adding support for Aspectj, because we are using Aspectj annotations -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.13</version>
 		</dependency>
 
 		<!-- Adding support for lombok -->

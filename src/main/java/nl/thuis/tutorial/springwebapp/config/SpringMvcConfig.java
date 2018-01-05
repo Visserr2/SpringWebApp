@@ -4,6 +4,7 @@ package nl.thuis.tutorial.springwebapp.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -14,8 +15,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration // Its a configuration class
 @EnableWebMvc  // This annotation is equal to mvc:annotation-driven tag
+@EnableAspectJAutoProxy // This annotation enables using Spring Aop by creating proxies. This is equal to aop:aspectj-autoproxy tag
 @ComponentScan(basePackages= {"nl.thuis.tutorial.springwebapp.controller", "nl.thuis.tutorial.springwebapp.repository.impl", 
-								"nl.thuis.tutorial.springwebapp.service.impl" })
+								"nl.thuis.tutorial.springwebapp.service.impl", "nl.thuis.tutorial.springwebapp.aspect" })
 public class SpringMvcConfig implements WebMvcConfigurer {
 
 	private static final String ROOT = "/";
